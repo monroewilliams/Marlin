@@ -85,9 +85,11 @@
 
 #define ST7920_SND_BIT \
   WRITE(ST7920_CLK_PIN, LOW);        ST7920_DELAY_1; \
+    __asm__("nop\n\t"); \
   WRITE(ST7920_DAT_PIN, val & 0x80); ST7920_DELAY_2; \
   WRITE(ST7920_CLK_PIN, HIGH);       ST7920_DELAY_3; \
-  val <<= 1
+  val <<= 1 ;\
+    __asm__("nop\n\t");
 
 static void ST7920_SWSPI_SND_8BIT(uint8_t val) {
   ST7920_SND_BIT; // 1
