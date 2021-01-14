@@ -502,10 +502,10 @@
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
 
-    // MBW - local values (from original firmware autotune)
-    #define DEFAULT_Kp 13.06
-    #define DEFAULT_Ki 1.07
-    #define DEFAULT_Kd 39.82
+    // MBW - local values (from recent autotune)
+    #define DEFAULT_Kp 27.71
+    #define DEFAULT_Ki 1.83
+    #define DEFAULT_Kd 105.07
   #endif
 #endif // PIDTEMP
 
