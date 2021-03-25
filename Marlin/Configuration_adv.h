@@ -1193,7 +1193,7 @@
   #endif
 
   // Insert a menu for preheating at the top level to allow for quick access
-  //#define PREHEAT_SHORTCUT_MENU_ITEM
+  #define PREHEAT_SHORTCUT_MENU_ITEM
 
 #endif // HAS_LCD_MENU
 
@@ -1209,27 +1209,27 @@
   #endif
 
   // Scroll a longer status message into view
-  //#define STATUS_MESSAGE_SCROLLING
+  #define STATUS_MESSAGE_SCROLLING
 
   // On the Info Screen, display XY with one decimal place when possible
-  //#define LCD_DECIMAL_SMALL_XY
+  #define LCD_DECIMAL_SMALL_XY
 
   // Add an 'M73' G-code to set the current percentage
-  //#define LCD_SET_PROGRESS_MANUALLY
+  #define LCD_SET_PROGRESS_MANUALLY
 
   // Show the E position (filament used) during printing
-  //#define LCD_SHOW_E_TOTAL
+  #define LCD_SHOW_E_TOTAL
 #endif
 
 #if EITHER(SDSUPPORT, LCD_SET_PROGRESS_MANUALLY) && ANY(HAS_MARLINUI_U8GLIB, HAS_MARLINUI_HD44780, IS_TFTGLCD_PANEL, EXTENSIBLE_UI)
-  //#define SHOW_REMAINING_TIME       // Display estimated time to completion
+  #define SHOW_REMAINING_TIME       // Display estimated time to completion
   #if ENABLED(SHOW_REMAINING_TIME)
     //#define USE_M73_REMAINING_TIME  // Use remaining time from M73 command instead of estimation
-    //#define ROTATE_PROGRESS_DISPLAY // Display (P)rogress, (E)lapsed, and (R)emaining time
+    #define ROTATE_PROGRESS_DISPLAY // Display (P)rogress, (E)lapsed, and (R)emaining time
   #endif
 
   #if EITHER(HAS_MARLINUI_U8GLIB, EXTENSIBLE_UI)
-    //#define PRINT_PROGRESS_SHOW_DECIMALS // Show progress with decimal digits
+    #define PRINT_PROGRESS_SHOW_DECIMALS // Show progress with decimal digits
   #endif
 
   #if EITHER(HAS_MARLINUI_HD44780, IS_TFTGLCD_PANEL)
@@ -3460,21 +3460,11 @@
   #define USER_DESC_1 "Z Lift"
   #define USER_GCODE_1 "G91\nG1 Z10"
 
-  #define USER_DESC_2 "Home"
+  #define USER_DESC_2 "Home X/Y/Z"
   #define USER_GCODE_2 "G28"
 
-  #define USER_DESC_3 "Front Right"
-  #define USER_GCODE_3 "G90\nG1 Z5\nG1 X200 Y0 F8000\nG1 Z0"
-
-  #define USER_DESC_4 "Center Left"
-  #define USER_GCODE_4 "G90\nG1 Z5\nG1 X0 Y100 F8000\nG1 Z0"
-
-  #define USER_DESC_5 "Rear Right"
-  #define USER_GCODE_5 "G90\nG1 Z5\nG1 X200 Y200 F8000\nG1 Z0"
-
-  #define USER_DESC_6 "Center"
-  #define USER_GCODE_6 "G90\nG1 Z5\nG1 X100 Y100 F8000\nG1 Z0"
-
+  #define USER_DESC_3 "Preheat for PETG"
+  #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
 
 //  #define USER_DESC_1 "Home & UBL Info"
 //  #define USER_GCODE_1 "G28\nG29 W"
