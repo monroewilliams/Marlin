@@ -216,7 +216,7 @@
   //
   // Software serial
   //
-#if 1
+#if 0
   // The Panucatt stepper driver in Easy UART mode puts serial on the "enable" pin, so these need to be changed.
   #define X_SERIAL_TX_PIN                  X_ENABLE_PIN
   #define X_SERIAL_RX_PIN                  X_ENABLE_PIN
