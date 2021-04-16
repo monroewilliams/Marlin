@@ -409,7 +409,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -465,7 +465,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
+#define HEATER_0_MAXTEMP 300
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -512,10 +512,16 @@
     // #define DEFAULT_Ki   1.08
     // #define DEFAULT_Kd 114.00
 
-    // MBW - local values (from recent autotune)
-    #define DEFAULT_Kp 27.71
-    #define DEFAULT_Ki 1.83
-    #define DEFAULT_Kd 105.07
+    // MBW - local values (from recent autotune) for MK10 hotend
+    // #define DEFAULT_Kp 27.71
+    // #define DEFAULT_Ki 1.83
+    // #define DEFAULT_Kd 105.07
+
+    // MBW - local values (from recent autotune) for Titan Aero hotend
+    // Determined by: M303 E0 S245 C8
+    #define DEFAULT_Kp 39.3
+    #define DEFAULT_Ki 7.5
+    #define DEFAULT_Kd 51.6
   #endif
 #endif // PIDTEMP
 
@@ -802,7 +808,10 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 188 }
+// MBW -- MK10 extruder
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 188 }
+// MBW -- Titan Aero extruder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 810.2 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1053,7 +1062,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 24, -36, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -16, -42, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1195,7 +1204,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1234,10 +1243,10 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -17
+#define X_MIN_POS -2
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 234
+#define X_MAX_POS 249
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 275
 
