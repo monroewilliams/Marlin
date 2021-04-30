@@ -519,9 +519,14 @@
 
     // MBW - local values (from recent autotune) for Titan Aero hotend
     // Determined by: M303 E0 S245 C8
-    #define DEFAULT_Kp 39.3
-    #define DEFAULT_Ki 7.5
-    #define DEFAULT_Kd 51.6
+    // #define DEFAULT_Kp 39.3
+    // #define DEFAULT_Ki 7.5
+    // #define DEFAULT_Kd 51.6
+
+    // MBW - autotune values after changing to copper heat block, titanium heat break, and 40w heater
+    #define DEFAULT_Kp 30.3
+    #define DEFAULT_Ki 6.01
+    #define DEFAULT_Kd 38.3
   #endif
 #endif // PIDTEMP
 
