@@ -1067,7 +1067,12 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -16, -42, 0 }
+
+// Original ReDuplicator Titan Aero mount
+// #define NOZZLE_TO_PROBE_OFFSET { -16, -42, 0}
+
+// Remixed ReDuplicator + EVA-3D mount
+#define NOZZLE_TO_PROBE_OFFSET { -15, -47, 0}
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1248,12 +1253,12 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -2
+#define X_MIN_POS -7
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 239
+#define X_MAX_POS 249
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 275
+#define Z_MAX_POS 250
 
 /**
  * Software Endstops
