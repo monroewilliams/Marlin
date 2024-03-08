@@ -524,9 +524,14 @@
     // #define DEFAULT_Kd 51.6
 
     // MBW - autotune values after changing to copper heat block, titanium heat break, 40w heater, and tungsten carbide nozzle
-    #define DEFAULT_Kp 24.3
-    #define DEFAULT_Ki 4.14
-    #define DEFAULT_Kd 35.8
+    // #define DEFAULT_Kp 24.3
+    // #define DEFAULT_Ki 4.14
+    // #define DEFAULT_Kd 35.8
+
+    // MBW - autotune values after swapping to ceramic heat block
+    #define DEFAULT_Kp 18.1
+    #define DEFAULT_Ki 2.23
+    #define DEFAULT_Kd 36.7
   #endif
 #endif // PIDTEMP
 
