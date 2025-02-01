@@ -1321,7 +1321,9 @@
 // MBW -- MK10 extruder
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 188 }
 // MBW -- Titan Aero extruder
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 810.2 }
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 810.2 }
+// MBW -- Revo Roto extruder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 2682 }
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
