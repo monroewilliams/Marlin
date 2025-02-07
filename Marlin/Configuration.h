@@ -174,6 +174,12 @@
 //#define E6_DRIVER_TYPE A4988
 //#define E7_DRIVER_TYPE A4988
 
+// MBW -- explicitly define the Z2 pins (it's actually plugged into the E1 connector).
+// This avoids the AUTO_ASSIGNED_Z2_STEPPER warning
+#define Z2_STEP_PIN                          E1_STEP_PIN
+#define Z2_DIR_PIN                           E1_DIR_PIN
+#define Z2_ENABLE_PIN                        E1_ENABLE_PIN
+
 /**
  * Additional Axis Settings
  *
@@ -654,7 +660,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 300
+#define HEATER_0_MAXTEMP 315
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -1375,7 +1381,7 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define CLASSIC_JERK
+// #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 8.0
   #define DEFAULT_YJERK 8.0

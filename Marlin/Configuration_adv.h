@@ -1133,7 +1133,7 @@
  * Enable/disable and set parameters with G-code M493.
  * See ft_types.h for named values used by FTM options.
  */
-//#define FT_MOTION
+#define FT_MOTION
 #if ENABLED(FT_MOTION)
   //#define FTM_IS_DEFAULT_MOTION                 // Use FT Motion as the factory default?
   #define FTM_DEFAULT_DYNFREQ_MODE dynFreqMode_DISABLED // Default mode of dynamic frequency calculation. (DISABLED, Z_BASED, MASS_BASED)
@@ -1149,7 +1149,7 @@
   #define FTM_SHAPING_V_TOL_X           0.05f     // Vibration tolerance used by EI input shapers for X axis
   #define FTM_SHAPING_V_TOL_Y           0.05f     // Vibration tolerance used by EI input shapers for Y axis
 
-  //#define FT_MOTION_MENU                        // Provide a MarlinUI menu to set M493 parameters
+  #define FT_MOTION_MENU                        // Provide a MarlinUI menu to set M493 parameters
 
   /**
    * Advanced configuration
@@ -3141,7 +3141,7 @@
     // #define E0_CURRENT      800
     // #define E0_MICROSTEPS    32
     // MBW -- Revo Roto settings
-    #define E0_CURRENT      420
+    #define E0_CURRENT      500
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
