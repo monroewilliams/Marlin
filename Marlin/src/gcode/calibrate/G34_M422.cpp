@@ -522,16 +522,16 @@ void GcodeSuite::M422() {
     parser.floatval('Y', pos_dest[position_index].y)
   };
 
-  if (is_probe_point) {
-    if (!probe.can_reach(pos.x, Y_CENTER)) {
-      SERIAL_ECHOLNPGM(GCODE_ERR_MSG("(X) out of bounds."));
-      return;
-    }
-    if (!probe.can_reach(pos)) {
-      SERIAL_ECHOLNPGM(GCODE_ERR_MSG("(Y) out of bounds."));
-      return;
-    }
-  }
+  // if (is_probe_point) {
+  //   if (!probe.can_reach(pos.x, Y_CENTER)) {
+  //       SERIAL_ECHOLNPGM(GCODE_ERR_MSG("(X) out of bounds."));
+  //     return;
+  //   }
+  //   if (!probe.can_reach(pos)) {
+  //     SERIAL_ECHOLNPGM(GCODE_ERR_MSG("(Y) out of bounds."));
+  //     return;
+  //   }
+  // }
 
   pos_dest[position_index] = pos;
 }

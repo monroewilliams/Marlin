@@ -345,8 +345,8 @@
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD                60 // (seconds)
-  #define WATCH_BED_TEMP_INCREASE               5 // (°C)
+  #define WATCH_BED_TEMP_PERIOD                120 // (seconds)
+  #define WATCH_BED_TEMP_INCREASE               2 // (°C)
 #endif
 
 /**
@@ -1038,7 +1038,7 @@
    */
   //#define Z_STEPPER_ALIGN_XY { {  10, 190 }, { 100,  10 }, { 190, 190 } }
   // These will be offset using NOZZLE_TO_PROBE_OFFSET to position the carriage for the probes
-  #define Z_STEPPER_ALIGN_XY { {  20, Y_CENTER }, { 235,  Y_CENTER }}
+  // #define Z_STEPPER_ALIGN_XY { {  20, Y_CENTER }, { 200,  Y_CENTER }}
 
   /**
    * Orientation for the automatically-calculated probe positions.

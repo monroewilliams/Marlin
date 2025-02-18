@@ -835,6 +835,8 @@
   #define DEFAULT_bedKi .83
   #define DEFAULT_bedKd 572.8
 
+  // 220mm square aluminim bed with integral heater/thermistor, values from autotune at 85C
+
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
   //#define BED_LIMIT_SWITCHING   // Keep the bed temperature within BED_HYSTERESIS of the target
@@ -1929,8 +1931,8 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 250
-#define Y_BED_SIZE 215
+#define X_BED_SIZE 220
+#define Y_BED_SIZE 220
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
