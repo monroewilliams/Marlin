@@ -1329,7 +1329,7 @@
 // MBW -- Titan Aero extruder
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 810.2 }
 // MBW -- Revo Roto extruder
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 2682 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 397 }
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
@@ -1679,7 +1679,13 @@
 // #define NOZZLE_TO_PROBE_OFFSET { -16, -42, 0}
 
 // Remixed ReDuplicator + EVA-3D mount
-#define NOZZLE_TO_PROBE_OFFSET { -15, -47, 0}
+// #define NOZZLE_TO_PROBE_OFFSET { -10, -45, 0}
+
+// EVA Roto mount
+// #define NOZZLE_TO_PROBE_OFFSET { -15, -47, 0}
+
+// EVA Hemera mount
+#define NOZZLE_TO_PROBE_OFFSET { 10, -45, 0}
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1864,7 +1870,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
