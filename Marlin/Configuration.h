@@ -831,12 +831,15 @@
   // #define DEFAULT_bedKd 305.4
 
   // Clone of Prusa MK52 heated bed, values from autotune at 85C
-  #define DEFAULT_bedKp 26.7
-  #define DEFAULT_bedKi .83
-  #define DEFAULT_bedKd 572.8
+  // #define DEFAULT_bedKp 26.7
+  // #define DEFAULT_bedKi .83
+  // #define DEFAULT_bedKd 572.8
 
   // 220mm square aluminim bed with integral heater/thermistor, values from autotune at 85C
-
+  #define DEFAULT_bedKp 76.01
+  #define DEFAULT_bedKi 8.93
+  #define DEFAULT_bedKd 431.14
+  
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
   //#define BED_LIMIT_SWITCHING   // Keep the bed temperature within BED_HYSTERESIS of the target
@@ -1697,7 +1700,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 0
+#define PROBING_MARGIN 10
 
 // X and Y axis travel speed between probes.
 // Leave undefined to use the average of the current XY homing feedrate.
